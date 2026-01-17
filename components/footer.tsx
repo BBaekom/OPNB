@@ -2,28 +2,46 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-foreground text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-          {/* Logo & Info */}
-          <div>
-            <div className="relative w-32 h-10 mb-6 bg-white rounded p-1">
-              <Image src="/images/img-5585.jpeg" alt="Opinion Logo" fill className="object-contain" />
-            </div>
-            <p className="text-white/60 text-sm leading-relaxed">
-              새로운 이야기를 만드는 디지털 콘텐츠 스튜디오
-              <br />© 2025 Opinion. All rights reserved.
-            </p>
+    <footer id="contact" className="bg-opinion-purple text-white py-16 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-4">
+
+        {/* Left Column: Logo */}
+        <div className="flex-1">
+          <div className="relative w-40 h-12 mb-6 bg-white rounded-lg p-2 flex items-center justify-center">
+            <Image
+              src="/logo-removebg.png"
+              alt="Opinion Logo"
+              fill
+              className="object-contain p-1"
+            />
+          </div>
+        </div>
+
+        {/* Center Column: Socials & Contact */}
+        <div className="flex-1 flex flex-col gap-8">
+          <div className="flex flex-col gap-2 font-bold text-lg">
+            <span className="cursor-pointer hover:opacity-80">YouTube</span>
+            <span className="cursor-pointer hover:opacity-80">Instagram</span>
+            <span className="cursor-pointer hover:opacity-80">Facebook</span>
           </div>
 
-          {/* Contact */}
-          <div className="text-right">
-            <h4 className="font-bold mb-4">CONTACT</h4>
-            <p className="text-white/60 text-sm">
-              contact@opinion.co.kr
-              <br />
-              서울특별시
+          <div>
+            <h4 className="font-bold mb-2 text-lg">Contact</h4>
+            <p className="text-white/80 text-sm">
+              op_official@opinioncorp.com
             </p>
+          </div>
+        </div>
+
+        {/* Right Column: Address & Copyright */}
+        <div className="flex-1 text-left md:text-right flex flex-col justify-between h-full gap-8">
+          <p className="text-white/80 text-sm leading-relaxed">
+            서울특별시
+          </p>
+
+          <div className="text-xs text-white/60">
+            <p className="mb-1 hover:underline cursor-pointer">개인정보 처리방침</p>
+            <p>© copyright opinion</p>
           </div>
         </div>
       </div>
